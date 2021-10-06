@@ -8,8 +8,8 @@
         android:name="com.example.fitnessapp.ui.fragments.RunFragment"
         android:label="RunFragment" >
         <action
-            android:id="@+id/action_runFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
+            android:id="@+id/action_runFragment_to_trackingFragment"
+            app:destination="@id/trackingFragment" />
     </fragment>
     <fragment
         android:id="@+id/setupFragment"
@@ -26,13 +26,13 @@
     <fragment
         android:id="@+id/trackingFragment"
         android:name="com.example.fitnessapp.ui.fragments.TrackingFragment"
-        android:label="TrackingFragment" />
+        android:label="TrackingFragment" >
+        <action
+            android:id="@+id/action_trackingFragment_to_runFragment"
+            app:destination="@id/runFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.fitnessapp.ui.fragments.SettingsFragment"
-        android:label="SettingsFragment" >
-        <action
-            android:id="@+id/action_settingsFragment_to_runFragment"
-            app:destination="@id/runFragment" />
-    </fragment>
+        android:label="SettingsFragment" />
 </navigation>
